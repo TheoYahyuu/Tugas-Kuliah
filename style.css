@@ -1,83 +1,181 @@
-:root {
-    --primary: #a594f9;
-}
+/* Style dasar untuk body */
 body {
-    font: 16/28px;
-    font-family: poppins;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
     color: #333;
 }
-/* ini bagian kontainer */
-.container {
-    /* width: 950px; */
-    margin: auto;
-    background-color: #fff;
+
+/* Header style dengan background gambar */
+header {
+    background-position: center;
+    color: rgb(120, 103, 63);
+    padding: 50px 20px;
+    text-align: center;
 }
-/*ini bagian header*/
-.header {
-    padding: 0.5rem;
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.header .judul {
-    font-size: 2rem;
-    font-weight: 800;
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.header .judul span {
-    color: var(--primary);
+
+/* Promo section style */
+section#promo {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
-.header ul li {
-    display: inline-block;
-    margin-top: 25px;
+
+section#promo h2 {
+    margin: 0 0 10px;
+    font-size: 2em;
+}
+
+section#promo button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+section#promo button:hover {
+    background-color: #e64a19;
+}
+
+/* Menu Seblak section dengan gambar di setiap item */
+section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section ul#listMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+section ul#listMenu li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section ul#listMenu li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     margin-right: 20px;
 }
-.header a {
-    text-decoration: none;
-    color: black;
-}
-.header a:hover {
-    color: var(--primary);
-}
-.header a ::after {
-    content: "";
-    display: block;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid var(--primary);
-    transform: scaleX(0);
-}
-.header a:hover::after {
-    transform: scaleX(0.7); /*panjang border*/
-    transition: 0.4s linear;
-}
-/*ini batas bagian header*/
 
-/*bagian banner*/
-.banner {
-    height: 450px;
-    background-image: url(../image/photo-1585076641399-5c06d1b3365f.avif);
-    background-size: cover;
-    background-position: 0, -180px;
-    border-bottom: 3px solid var(--primary);
+section ul#listMenu li div {
+    flex: 1;
 }
-.content {
+
+section ul#listMenu li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Order section style */
+section#order {
+    background-color: #ffffff;
     padding: 20px;
-}
-.content h2 {
-    font-size: 28px;
-    font-weight: bold;
-}
-.content .subjudul {
-    border-bottom: solid 3px var(--primary);
-    width: max-content;
-}
-.content .penulis {
-    font-size: 12px;
-    margin-top: -2px;
-}
-.content .penulis a {
-    color: orange;
-    text-decoration: none;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.content p {
+section#order label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+section#order select, section#order input[type="number"] {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 20px;
-    font-size: 15px;
-    text-align: justify;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+section#order button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+section#order button:hover {
+    background-color: #e64a19;
+}
+
+/* Total price and result styling */
+section#order p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Footer style */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section#order, section ul#listMenu {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    section ul#listMenu li {
+        padding: 10px;
+    }
 }
